@@ -4,12 +4,12 @@ body{
 }
 
 .center{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     align-items: center;
     justify-content: center;
     justify-items: center;
-    width: 100%;
-    flex-direction: column;
-    display: flex;
 }
 .commonWidthOrganizer{
     width: 100%;
@@ -24,6 +24,15 @@ body{
     padding: 14px 24px;
     border-color: transparent;
 }
+@media screen and (max-width: 500px) {
+    .commonWidthOrganizer {
+        max-width: 100%;
+        padding-right: 20px;
+        padding-left: 20px;
+        margin: 0px 0px 0px 0px;
+        box-sizing: border-box;
+    }
+  }
 
 /* ========================= ninth section - footerSection */
 .footerSection{
@@ -105,13 +114,10 @@ body{
     display: flex;
     flex-direction: column;
     text-decoration: none;
-
+    margin: 20px 6px 20px 6px;
 }
 
-.footer .linksSection{
-    display: flex;
-    flex-direction: column;
-}
+
 .footer .linksSection a{
     text-decoration: none;
     color: white;
@@ -163,6 +169,8 @@ border: none;
     background-color: #282828;
     color: white;
     text-decoration: none;
+    align-items: center;
+    text-align: center;
 }
 
 .footer .divider{
@@ -194,6 +202,46 @@ border: none;
     height: 16px;
     text-align: center;
 }
+@media screen and (max-width: 500px) {
+    .footer .links {
+        flex-direction: column;
+    }
+    .copyRightAndSocialMedia{
+        flex-direction: column;
+    }
+    .buyAvadaSection{
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+    .footer .newLetterSubscription{
+        max-width: 100%;
+    }
+    .buyDescriptionColumn{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: left;
+        margin: 0px 0px 0px 0px;
+        padding: 32px 32px 32px 32px;
+        box-sizing: border-box;
+    }
+    .buyAvadaSection{
+        flex-direction: column;
+        max-width: 90%;
+    }
+    .socialMediaLinks{
+        margin-top: 32px;
+    }
+    .footer .newLetterSubscription .emailTextField input{
+        height: 36px;
+    }
+    .footer .newLetterSubscription .emailTextField {
+        flex-direction: column;
+        width: 100%;
+    }
+
+  }
 /* ========================= Header styles */
 
 .header{
